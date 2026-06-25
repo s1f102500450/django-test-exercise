@@ -7,7 +7,7 @@ from todo.models import Task
 def index(request):
     if request.method == 'POST':
         date_value = parse_datetime(request.POST['due_at'])
-        
+
         if date_value is not None:
             due_at = make_aware(date_value)
         else:
